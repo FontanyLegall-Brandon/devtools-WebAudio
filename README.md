@@ -1,4 +1,4 @@
-# Mozilla-WebAudio
+# WebAudio-Extension
 
 ## Goal
 Migrate Web Audio Tool to an extension web extension
