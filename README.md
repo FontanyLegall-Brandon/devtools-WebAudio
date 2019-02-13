@@ -3,8 +3,8 @@
 ## Goal
 Migrate Web Audio Tool to an extension web extension
 
-- Analyse the codebase (server) (client) (I will send the deletion patch for you to look at in order to determine all of the pieces you need)
-- Create a web extension (pure frontend application) which can achieve the same result as the old API. (This is made possible by weakRefs)
+- Analyse the codebase ([server](https://searchfox.org/mozilla-central/source/devtools/server/actors/webaudio.js)) ([client](https://searchfox.org/mozilla-central/source/devtools/client/webaudioeditor)) (I will send the deletion patch for you to look at in order to determine all of the pieces you need)
+- Create a web extension (pure frontend application) which can achieve the same result as the old API. (This is made possible by [weakRefs](https://github.com/tc39/proposal-weakrefs))
 
 ## Skills
 - Working with upcoming JavaScript Proposals
