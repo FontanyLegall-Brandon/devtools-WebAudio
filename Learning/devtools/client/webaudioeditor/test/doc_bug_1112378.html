@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <link href="/static/icons/search.png" rel="shortcut icon">
+  <title>doc_bug_1112378.html - mozsearch</title>
+  <link href="/static/css/mozsearch.css" rel="stylesheet" type="text/css" media="screen"/>
+  <link href="/static/css/icons.css" rel="stylesheet" type="text/css" media="screen"/>
+  <link href="/static/css/selector-common.css" rel="stylesheet" type="text/css" media="screen"/>
+  <link href="/static/css/filter.css" rel="stylesheet" type="text/css" media="screen"/>
+  <link href="/static/css/xcode.css" rel="stylesheet" type="text/css" media="screen"/>
+</head>
+
+<body class="old-rev">
+  <form method="get" action="/mozilla-central/search" id="basic_search" class="search-box">
+    <fieldset>
+      <div id="search-box" class="h-flex-container" role="group">
+        <div id="query-section">
+          <label for="query" class="query_label visually-hidden">Find</label>
+          <input type="text" name="q" value="" maxlength="2048" id="query" accesskey="s" title="Search" placeholder="Search mozilla-central" autocomplete="off" />
+          <div class="zero-size-container">
+            <div class="bubble" id="query-bubble">
+            </div>
+          </div>
+          <section id="spinner"></section>
+        </div>
+        <div id="option-section" class="v-flex-container">
+          <label for="case">
+            <input type="checkbox" name="case" id="case" class="option-checkbox" value="true" accesskey="c"/><span class="access-key">C</span>ase-sensitive
+          </label>
+          <label for="regexp">
+            <input type="checkbox" name="regexp" id="regexp" class="option-checkbox" value="true" accesskey="r"/><span class="access-key">R</span>egexp search
+          </label>
+        </div>
+        <div id="path-section">
+          <label for="query" class="query_label visually-hidden">Path</label>
+          <input type="text" name="path" value="" maxlength="2048" id="path" accesskey="p" title="Path" placeholder="Path filter (supports globbing and ^, $)" autocomplete="off" />
+          <div class="zero-size-container">
+            <div class="bubble" id="path-bubble">
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <input type="submit" value="Search" class="visually-hidden" />
+    <div id="revision">
+      <span id="rev-id">Showing <a href="/mozilla-central/commit/01b4b3830ea3cae2e9e431019afa6391b471c6da">01b4b383</a>:</span>
+      <span id="rev-desc">Backed out changeset bc69bea83b66 (bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1527522">1527522</a>) for wrench bustages. CLOSED TREE</span>
+    </div>
+  </form>
+  <div id="content" class="content" data-no-results="No results for current query.">
+<div class="breadcrumbs"><a href="/mozilla-central/source/">mozilla-central</a><span class="path-separator">/</span><a href="/mozilla-central/source/devtools">devtools</a><span class="path-separator">/</span><a href="/mozilla-central/source/devtools/client">client</a><span class="path-separator">/</span><a href="/mozilla-central/source/devtools/client/webaudioeditor">webaudioeditor</a><span class="path-separator">/</span><a href="/mozilla-central/source/devtools/client/webaudioeditor/test">test</a><span class="path-separator">/</span><a href="/mozilla-central/source/devtools/client/webaudioeditor/test/doc_bug_1112378.html">doc_bug_1112378.html</a></div>
+<div class="panel">
+  <button id="panel-toggle">
+    <span class="navpanel-icon expanded" aria-hidden="false"></span>
+    Navigation
+  </button>
+  <section id="panel-content" aria-expanded="true" aria-hidden="false">
+  <label class="panel-accel"><input type="checkbox" id="panel-accel-enable" checked="checked">Enable keyboard shortcuts</label>
+  <h4>Source code</h4>
+  <ul>
+  <li>
+  <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=DevTools&component=Web Audio Editor" title="File a bug in DevTools :: Web Audio Editor" class="icon">File a bug in DevTools :: Web Audio Editor</a>
+  </li>
+  </ul>
+  <h4>Revision control</h4>
+  <ul>
+  <li>
+  <a href="/mozilla-central/rev/01b4b3830ea3cae2e9e431019afa6391b471c6da/devtools/client/webaudioeditor/test/doc_bug_1112378.html" title="Permalink" class="icon" data-update-link="true" data-link="/mozilla-central/rev/01b4b3830ea3cae2e9e431019afa6391b471c6da/devtools/client/webaudioeditor/test/doc_bug_1112378.html">Permalink <span class="accel">Y</span></a>
+  </li>
+  <li>
+  <a href="https://hg.mozilla.org/mozilla-central/log/tip/devtools/client/webaudioeditor/test/doc_bug_1112378.html" title="Log" class="icon">Log <span class="accel">L</span></a>
+  </li>
+  <li>
+  <a href="https://hg.mozilla.org/mozilla-central/raw-file/tip/devtools/client/webaudioeditor/test/doc_bug_1112378.html" title="Raw" class="icon">Raw <span class="accel">R</span></a>
+  </li>
+  <li>
+  <a href="javascript:alert('Hover over the gray bar on the left to see blame information.')" title="Blame" class="icon">Blame</a>
+  </li>
+  </ul>
+  </section>
+</div>
+<table id="file" class="file">
+  <thead class="visually-hidden">
+    <th scope="col">Line</th>
+    <th scope="col">Code</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="line-numbers">
+<span id="l1" class="line-number">1
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#1" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l2" class="line-number">2
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#2" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l3" class="line-number">3
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#3" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l4" class="line-number">4
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#4" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l5" class="line-number">5
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#5" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l6" class="line-number">6
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#6" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l7" class="line-number">7
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#7" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l8" class="line-number">8
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#8" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l9" class="line-number">9
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#9" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l10" class="line-number">10
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#10" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l11" class="line-number">11
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#11" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l12" class="line-number">12
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#12" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l13" class="line-number">13
+<div class="blame-strip c2" data-blame="7be7b11a1c38a4422d07defafb5acc6c44c149e9#%#13" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l14" class="line-number">14
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#14" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l15" class="line-number">15
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#15" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l16" class="line-number">16
+<div class="blame-strip c2" data-blame="640fe52298335597260c4708fb754d6d899feeda#%#16" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l17" class="line-number">17
+<div class="blame-strip c1" data-blame="f3e6802fb3dd0860309edea8864a3af00ba51ddf#%#17" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l18" class="line-number">18
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#18" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l19" class="line-number">19
+<div class="blame-strip c1" data-blame="6a7d7e5b8c26013494dcefaea5a797d4863e613f#%#19" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l20" class="line-number">20
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#20" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l21" class="line-number">21
+<div class="blame-strip c1" data-blame="f3e6802fb3dd0860309edea8864a3af00ba51ddf#%#21" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l22" class="line-number">22
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#22" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l23" class="line-number">23
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#23" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l24" class="line-number">24
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#24" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l25" class="line-number">25
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#25" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l26" class="line-number">26
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#26" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l27" class="line-number">27
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#27" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l28" class="line-number">28
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#28" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l29" class="line-number">29
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#29" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l30" class="line-number">30
+<div class="blame-strip c1" data-blame="ceaeb9355094af9bb68cce56902cf39086795fe0#%#30" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l31" class="line-number">31
+<div class="blame-strip c2" data-blame="6a7d7e5b8c26013494dcefaea5a797d4863e613f#%#31" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l32" class="line-number">32
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#32" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l33" class="line-number">33
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#33" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l34" class="line-number">34
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#34" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l35" class="line-number">35
+<div class="blame-strip c2" data-blame="6a7d7e5b8c26013494dcefaea5a797d4863e613f#%#35" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l36" class="line-number">36
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#36" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l37" class="line-number">37
+<div class="blame-strip c2" data-blame="f3e6802fb3dd0860309edea8864a3af00ba51ddf#%#37" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l38" class="line-number">38
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#38" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l39" class="line-number">39
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#39" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l40" class="line-number">40
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#40" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l41" class="line-number">41
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#41" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l42" class="line-number">42
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#42" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l43" class="line-number">43
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#43" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l44" class="line-number">44
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#44" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l45" class="line-number">45
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#45" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l46" class="line-number">46
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#46" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l47" class="line-number">47
+<div class="blame-strip c1" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#47" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l48" class="line-number">48
+<div class="blame-strip c2" data-blame="ceaeb9355094af9bb68cce56902cf39086795fe0#%#48" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l49" class="line-number">49
+<div class="blame-strip c1" data-blame="6a7d7e5b8c26013494dcefaea5a797d4863e613f#%#49" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l50" class="line-number">50
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#50" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l51" class="line-number">51
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#51" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l52" class="line-number">52
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#52" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l53" class="line-number">53
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#54" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l54" class="line-number">54
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#55" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l55" class="line-number">55
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#56" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+<span id="l56" class="line-number">56
+<div class="blame-strip c2" data-blame="e533052040eb108dbf7c4259af58c5caa3253d16#browser/devtools/webaudioeditor/test/doc_bug_1112378.html#57" role="button" aria-label="blame" aria-expanded="false"></div>
+</span>
+      </td>
+      <td class="code">
+<pre><code id="line-1" aria-labelledby="1"><span class="syn_comment" >&lt;!-- Any copyright is dedicated to the Public Domain.</span>
+</code><code id="line-2" aria-labelledby="2"><span class="syn_comment" >     <a href="http://creativecommons.org/publicdomain/zero/1.0/">http://creativecommons.org/publicdomain/zero/1.0/</a> --></span>
+</code><code id="line-3" aria-labelledby="3">&lt;!doctype html>
+</code><code id="line-4" aria-labelledby="4">
+</code><code id="line-5" aria-labelledby="5">&lt;<span class="syn_tag" >html</span>>
+</code><code id="line-6" aria-labelledby="6">  &lt;<span class="syn_tag" >head</span>>
+</code><code id="line-7" aria-labelledby="7">    &lt;<span class="syn_tag" >meta</span> <span class="syn_tag" >charset</span>="<span class="syn_string" >utf-8</span>"/>
+</code><code id="line-8" aria-labelledby="8">    &lt;<span class="syn_tag" >title</span>>Web Audio Editor test page&lt;/<span class="syn_tag" >title</span>>
+</code><code id="line-9" aria-labelledby="9">  &lt;/<span class="syn_tag" >head</span>>
+</code><code id="line-10" aria-labelledby="10">
+</code><code id="line-11" aria-labelledby="11">  &lt;<span class="syn_tag" >body</span>>
+</code><code id="line-12" aria-labelledby="12">
+</code><code id="line-13" aria-labelledby="13">    &lt;<span class="syn_tag" >script</span> <span class="syn_tag" >type</span>="<span class="syn_string" >text/javascript</span>">
+</code><code id="line-14" aria-labelledby="14">      <span class="syn_string" >"use strict"</span>;
+</code><code id="line-15" aria-labelledby="15">
+</code><code id="line-16" aria-labelledby="16">      <span class="syn_reserved" >const</span> ctx = <span class="syn_reserved" >new</span> AudioContext();
+</code><code id="line-17" aria-labelledby="17">      <span class="syn_reserved" >const</span> panner = ctx.createStereoPanner();
+</code><code id="line-18" aria-labelledby="18">
+</code><code id="line-19" aria-labelledby="19">      <span class="syn_reserved" >function</span> throwError() {
+</code><code id="line-20" aria-labelledby="20">        <span class="syn_reserved" >try</span> {
+</code><code id="line-21" aria-labelledby="21">          panner.connect({});
+</code><code id="line-22" aria-labelledby="22">        } <span class="syn_reserved" >catch</span> (e) {
+</code><code id="line-23" aria-labelledby="23">          <span class="syn_reserved" >return</span> {
+</code><code id="line-24" aria-labelledby="24">            lineNumber: e.lineNumber,
+</code><code id="line-25" aria-labelledby="25">            fileName: e.fileName,
+</code><code id="line-26" aria-labelledby="26">            columnNumber: e.columnNumber,
+</code><code id="line-27" aria-labelledby="27">            message: e.message,
+</code><code id="line-28" aria-labelledby="28">            <span class="syn_reserved" >instanceof</span>: e <span class="syn_reserved" >instanceof</span> TypeError,
+</code><code id="line-29" aria-labelledby="29">            stringified: e.toString(),
+</code><code id="line-30" aria-labelledby="30">            name: e.name,
+</code><code id="line-31" aria-labelledby="31">          };
+</code><code id="line-32" aria-labelledby="32">        }
+</code><code id="line-33" aria-labelledby="33">      }
+</code><code id="line-34" aria-labelledby="34">
+</code><code id="line-35" aria-labelledby="35">      <span class="syn_reserved" >function</span> throwDOMException() {
+</code><code id="line-36" aria-labelledby="36">        <span class="syn_reserved" >try</span> {
+</code><code id="line-37" aria-labelledby="37">          panner.channelCount = 3;
+</code><code id="line-38" aria-labelledby="38">        } <span class="syn_reserved" >catch</span> (e) {
+</code><code id="line-39" aria-labelledby="39">          <span class="syn_reserved" >return</span> {
+</code><code id="line-40" aria-labelledby="40">            lineNumber: e.lineNumber,
+</code><code id="line-41" aria-labelledby="41">            columnNumber: e.columnNumber,
+</code><code id="line-42" aria-labelledby="42">            filename: e.filename,
+</code><code id="line-43" aria-labelledby="43">            message: e.message,
+</code><code id="line-44" aria-labelledby="44">            code: e.code,
+</code><code id="line-45" aria-labelledby="45">            result: e.result,
+</code><code id="line-46" aria-labelledby="46">            <span class="syn_reserved" >instanceof</span>: e <span class="syn_reserved" >instanceof</span> DOMException,
+</code><code id="line-47" aria-labelledby="47">            stringified: e.toString(),
+</code><code id="line-48" aria-labelledby="48">            name: e.name,
+</code><code id="line-49" aria-labelledby="49">          };
+</code><code id="line-50" aria-labelledby="50">        }
+</code><code id="line-51" aria-labelledby="51">      }
+</code><code id="line-52" aria-labelledby="52">
+</code><code id="line-53" aria-labelledby="53">    &lt;/<span class="syn_tag" >script</span>>
+</code><code id="line-54" aria-labelledby="54">  &lt;/<span class="syn_tag" >body</span>>
+</code><code id="line-55" aria-labelledby="55">
+</code><code id="line-56" aria-labelledby="56">&lt;/<span class="syn_tag" >html</span>>
+</code></pre>      </td>
+    </tr>
+  </tbody>
+</table>
+<script>var ANALYSIS_DATA = [];</script>
+    </div>
+  <div id="foot" class="footer">
+    This page was generated by Searchfox <span class="pretty-date" data-datetime="Wed, 13 Feb 2019 15:28:42 +0000"></span>.
+  </div>
+  <span id="data" data-root="/" data-search="/mozilla-central/search" data-tree="mozilla-central" data-path="devtools/client/webaudioeditor/test/doc_bug_1112378.html"></span>
+  <script src="/static/js/libs/jquery-2.1.3.min.js"></script>
+  <script src="/static/js/libs/nunjucks.min.js"></script>
+  <script src="/static/js/utils.js"></script>
+  <script src="/static/js/dxr.js"></script>
+  <script src="/static/js/context-menu.js"></script>
+  <script src="/static/js/filter.js"></script>
+  <script src="/static/js/panel.js"></script>
+  <script src="/static/js/code-highlighter.js"></script>
+  <script src="/static/js/blame.js"></script>
+  </body>
+</html>
