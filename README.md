@@ -1,4 +1,35 @@
-# WebAudio-Extension
+<h1 align="center">
+  <br>
+  <a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio"><img src="http://projects.fontany-legall.xyz/devtools-WebAudio/assets/icon96.png" alt="WebAudio"></a>
+  <br>
+WebAudio devtools extension
+  <br>
+</h1>
+
+<h4 align="center">The  <a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API" target="_blank">Web Audio Tool</a> migration  into an web extension</h4>
+
+<p align="center">
+<img src="https://travis-ci.com/FontanyLegall-Brandon/devtools-WebAudio.svg?token=ddDp96SuTBDWqbwuapYh&branch=master">
+ <a href="">
+    <img src="https://img.shields.io/amo/v/incomming.svg">
+  </a>
+ <img src="https://img.shields.io/github/tag/FontanyLegall-Brandon/devtools-WebAudio.svg">
+  <a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/issues">
+    <img src="https://img.shields.io/github/issues/FontanyLegall-Brandon/devtools-WebAudio.svg">
+  </a>
+  <a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/FontanyLegall-Brandon/devtools-WebAudio.svg">
+  </a>
+  
+</p>
+
+<p align="center">
+  <a href="#goal">Goal</a> •
+  <a href="#versions">Versions</a> •
+  <a href="#challenges">Challenges</a> •
+  <a href="#technical-solutions">Technical Solutions</a> 
+</p>
+
 
 ## Goal
 Migrate Web Audio Tool to an extension web extension
@@ -6,12 +37,9 @@ Migrate Web Audio Tool to an extension web extension
 - Analyse the codebase ([server](https://searchfox.org/mozilla-central/source/devtools/server/actors/webaudio.js)) ([client](https://searchfox.org/mozilla-central/source/devtools/client/webaudioeditor)) (I will send the deletion patch for you to look at in order to determine all of the pieces you need)
 - Create a web extension (pure frontend application) which can achieve the same result as the old API. (This is made possible by [weakRefs](https://github.com/tc39/proposal-weakrefs))
 
-## Skills
-- Working with upcoming JavaScript Proposals
-- Understanding Shared Garbage Collection
-- Web Audio Nodes
-- Web Extension authoring
-- Project Planning
+## Versions
+
+ - [ ] In progress
 
 ## Challenges
 - Two parts of its implementation to be addressed:
@@ -35,12 +63,3 @@ Migrate Web Audio Tool to an extension web extension
 		- set a finalizer for that node that uses this ID as its holdings
 		- when the node is reclaimed, the finalizer runs with the ID holdings, which we postMessage (or whatever messaging API content scripts have) the ID up to the web extension itself, so it can clean up
 
-## Timeline
-- The other two panels will be deprecated as intended during q4 2018/q1 2019
-- WebAudio panel will remain as it is until q2 2019
-	- We will support the student and write up information regarding the different parts of the proposal
-		- Nick → weakrefs / finalize
-		- Paul → web audio specifics
-		- Tom → content script
-		- Yulia → devtools
-		- lgreco → web extensions
