@@ -26,6 +26,7 @@
     "mozilla"
   ],
   "dependencies": {
-    "babel-eslint": "^7.2.3"
+    "babel-eslint": "^7.2.3",
+    "dagre-d3": "^0.6.3"
   }
 }
