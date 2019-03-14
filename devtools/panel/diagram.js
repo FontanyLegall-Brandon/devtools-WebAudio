@@ -1,3 +1,13 @@
+// Set up zoom support
+var svg = d3.select("svg"),
+    inner = svg.select("g"),
+    zoom = d3.zoom().on("zoom", function() {
+        inner.attr("transform", d3.event.transform);
+    });
+svg.call(zoom);
+
+
+
 // Preparation of DagreD3 data structures
 var g = new dagreD3.graphlib.Graph().setGraph({
     nodesep: 10,
@@ -99,3 +109,7 @@ d3.selectAll("g.node")
     });
 
 
+svg.selectAll("g.node").on("click", function(id) {
+    console.log("Clicked " + id);
+
+});

@@ -3,18 +3,64 @@
 <html>
   <head>
     <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="webaudioeditor.css">
+      <style>
+          html, body { margin:0; padding:0; overflow:hidden }
+          svg { position:fixed; top:0; left:0; height:100%; width:100% }
+
+          .node {
+              white-space: nowrap;
+          }
+          .node rect,
+          .node circle,
+          .node ellipse {
+              stroke: #333;
+              fill: #fff;
+              stroke-width: 1.5px;
+          }
+          .cluster rect {
+              stroke: #333;
+              fill: #000;
+              fill-opacity: 0.1;
+              stroke-width: 1.5px;
+          }
+          .edgePath path.path {
+              stroke: #333;
+              stroke-width: 1.5px;
+              fill: none;
+          }
+      </style>
+
+      <style>
+          h1, h2 {
+              color: #333;
+          }
+          textarea {
+              width: 800px;
+          }
+          label {
+              margin-top: 1em;
+              display: block;
+          }
+          .error {
+              color: red;
+          }
+      </style>
+
   </head>
-  <body>
+  <body><!--
      <button id="button_h1">Inspect h1</button>
      <button id="button_background">Reddinate inspected element</button>
      <button id="button_jquery">Check for jquery</button>
-     <button id="button_message">Inject content script</button>    
+     <button id="button_message">Inject content script</button>-->
     <script src="devtools-panel.js"></script>
      <div class="container">
-       <svg height="700"><g/></svg>
+         <svg>
+             <g/>
+         </svg>
      </div>
      <script src="../../node_modules/d3/build/d3.js"></script>
      <script src="../../node_modules/dagre-d3/dist/dagre-d3.js"></script>
-    <script src="test.js"></script>
+    <script src="diagram.js"></script>
   </body>
 </html>
