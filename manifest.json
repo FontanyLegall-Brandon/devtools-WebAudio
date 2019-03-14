@@ -11,13 +11,22 @@
   },
   
   "background": {
-    "scripts": ["background_scripts/background.js"]
+    "scripts": ["node_modules/d3/build/d3.js","node_modules/dagre-d3/dist/dagre-d3.js"]
   },
   
   "permissions": [
       "<all_urls>"
   ],
-  
+
+  "content_scripts":
+  [
+    {
+      "matches":["*://*.mozilla.org/*"],
+      "js":["background_scripts/background.js"]
+    }
+  ],
+
   "devtools_page": "devtools/devtools-page.html"
+
 
 }
