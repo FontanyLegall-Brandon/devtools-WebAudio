@@ -47,6 +47,13 @@
           }
       </style>
 
+      <style>
+          .boxed {
+              border-left: 1px solid black ;
+              position:fixed; top:0; right:0; height:100%; width:300px
+          }
+      </style>
+
   </head>
   <body>
     <script src="devtools-panel.js"></script>
@@ -54,6 +61,9 @@
          <svg>
              <g/>
          </svg>
+         <div class="boxed">
+             This text is enclosed in a box.
+         </div>
      </div>
      <script src="../../node_modules/d3/build/d3.js"></script>
      <script src="../../node_modules/dagre-d3/dist/dagre-d3.js"></script>
