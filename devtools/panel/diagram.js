@@ -82,7 +82,7 @@ edges.forEach(function(edge) {
 var render = new dagreD3.render();
 // Set graph height and init zoom
 var height = 900;
-var svg = d3.select("svg");
+
 var container = svg.select("g");
 
 render(container, g);
@@ -109,7 +109,4 @@ d3.selectAll("g.node")
     });
 
 
-svg.selectAll("g.node").on("click", function(id) {
-    console.log("Clicked " + id);
-
-});
+svg.selectAll("g.node").on("click", function(id) { var _node = g.node(id); console.log("Clicked " + id,_node); });
