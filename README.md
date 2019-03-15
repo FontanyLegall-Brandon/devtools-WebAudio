@@ -39,6 +39,10 @@ Migrate Web Audio Tool to an extension web extension
 
 ## Versions
 
+ - [ ] **0.1.3 :**
+	 - Create the extension
+	 - Import library
+	 - Set a basic example of the extension with dagre-d3
  - [ ] In progress
 
 ## Challenges
