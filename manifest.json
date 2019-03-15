@@ -1,0 +1,32 @@
+{
+  "description": "Create a web extension (pure frontend application) which can achieve the same result as the old  WebAudioAPI",
+  "manifest_version": 2,
+  "name": "devtools-WebAudio",
+  "version": "0.1",
+  "author": "Brandon Fontany-Legall",
+  "homepage_url": "https://github.com/FontanyLegall-Brandon/devtools-WebAudio",
+  "icons": {
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png"
+  },
+  
+  "background": {
+    "scripts": ["node_modules/d3/build/d3.js","node_modules/dagre-d3/dist/dagre-d3.js"]
+  },
+  
+  "permissions": [
+      "<all_urls>"
+  ],
+
+  "content_scripts":
+  [
+    {
+      "matches":["*://*.mozilla.org/*"],
+      "js":["background_scripts/background.js"]
+    }
+  ],
+
+  "devtools_page": "devtools/devtools-page.html"
+
+
+}
