@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>JS Bin</title>
+
+<body>
+<script>
+  "use strict";
+  console.clear();
+  
+  function makeWeakRef(obj) {
+    let collection = document.getElementsByTagName("foo");
+    collection.expando = obj;
+    collection = null;
+
+    return {
+      get() {
+        return document.getElementsByTagName("foo").expando;
+      }
+    };
+  }
+
+  let obj = { foo: 'bar' };
+  const wr = makeWeakRef(obj);
+  obj = null;
+  
+  console.log('before', wr.get());
+  
+  // Create lots of garbage, both DOM and JS
+  for (let i = 0; i < 100000; ++i) {
+    document.body.appendChild(document.createElement('span'));
+  }
+  document.body.textContent = '';
+
+  let set = new Set();
+  for (let i = 0; i < 100000; ++i) {
+    set.add({ some: 'garbage' });
+  }
+  set = null;
+  
+  
+  setTimeout(() => {
+    console.log('after 1 second', wr.get());
+  }, 1000);
+
+    setTimeout(() => {
+    console.log('after 10 seconds', wr.get());
+  }, 10000);
+</script>
+
