@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+function traceMethodCalls(obj) {
+    let handler = {
+        get(target, propKey, receiver) {
+            const origMethod = target[propKey];
+            return function (...args) {
+                let result = origMethod.apply(this, args);
+                console.log(propKey + JSON.stringify(args)
+                    + ' -> ' + JSON.stringify(result));
+                return result;
+            };
+        }
+    };
+    return new Proxy(obj, handler);
+}
+
+let obj = {
+    multiply(x, y) {
+        return x * y;
+    },
+    squared(x) {
+        return this.multiply(x, x);
+    },
+};
+
+let tracedObj = traceMethodCalls(obj);
+tracedObj.multiply(2,7);
+tracedObj.squared(9)
+</script>
+
+
+
+<script id="jsbin-source-javascript" type="text/javascript">function traceMethodCalls(obj) {
+    let handler = {
+        get(target, propKey, receiver) {
+            const origMethod = target[propKey];
+            return function (...args) {
+                let result = origMethod.apply(this, args);
+                console.log(propKey + JSON.stringify(args)
+                    + ' -> ' + JSON.stringify(result));
+                return result;
+            };
+        }
+    };
+    return new Proxy(obj, handler);
+}
+
+let obj = {
+    multiply(x, y) {
+        return x * y;
+    },
+    squared(x) {
+        return this.multiply(x, x);
+    },
+};
+
+let tracedObj = traceMethodCalls(obj);
+tracedObj.multiply(2,7);
+tracedObj.squared(9)
+</script></body>
+</html>
