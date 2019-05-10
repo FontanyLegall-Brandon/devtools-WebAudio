@@ -1,15 +1,15 @@
 
 # Gists
 
- - Balance Webaudio (<a href="#balance-webaudio">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/balance-webaudio">files</a>| <a href="https://jsbin.com/bugupok/1/edit">jsbin</a>)
- - Basic WeakRef (<a href="#basic-weakref">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-WeakRef">files</a>| <a href="https://jsbin.com/qisipol/edit?html,console">jsbin</a>)
- - Basic Function-prototype-track (<a href="#basic-function-prototype-track">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-function-prototype-track">files</a>| <a href="https://jsbin.com/bosuwab/edit?js,console">jsbin</a>)
- - Basic trace method (<a href="#basic-trace-method">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-trace-method">files</a>| <a href="https://jsbin.com/cuwegug/1/edit?js,console">jsbin</a>)
- - Basic constructor interceptor (<a href="#basic-constructor-interceptor">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-constructor-interceptor">files</a>| <a href="https://jsbin.com/puyubir/edit?js,console">jsbin</a>)
- - Basic Audionode connect track (<a href="#basic-audionode-connect-track">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-audionode-connect-track">files</a>| <a href="https://jsbin.com/vepawix/edit?js,console,output">jsbin</a>)
- - Simple DagreD3 (<a href="#simple-dagred3">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/simple-dagred3">files</a>| <a href="https://jsbin.com/qoseloc/edit?js,output">jsbin</a>)
- - Basic Audionode connect track to DagreD3 (<a href="#basic-audionode-connect-track-to-dagred3">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-audionode-connect-track-to-dagred3">files</a>| <a href="https://jsbin.com/gebilob/edit?js,console,output">jsbin</a>)
- 
+- Balance Webaudio (<a href="#balance-webaudio">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/balance-webaudio">files</a>| <a href="https://jsbin.com/bugupok/1/edit">jsbin</a>)
+- Basic WeakRef (<a href="#basic-weakref">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-WeakRef">files</a>| <a href="https://jsbin.com/qisipol/1/edit?html,console">jsbin</a>)
+- Basic Function-prototype-track (<a href="#basic-function-prototype-track">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-function-prototype-track">files</a>| <a href="https://jsbin.com/bosuwab/edit?js,console">jsbin</a>)
+- Basic trace method (<a href="#basic-trace-method">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-trace-method">files</a>| <a href="https://jsbin.com/cuwegug/1/edit?js,console">jsbin</a>)
+- Basic constructor interceptor (<a href="#basic-constructor-interceptor">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-constructor-interceptor">files</a>| <a href="https://jsbin.com/puyubir/edit?js,console">jsbin</a>)
+- Basic Audionode connect track (<a href="#basic-audionode-connect-track">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-audionode-connect-track">files</a>| <a href="https://jsbin.com/vepawix/edit?js,console,output">jsbin</a>)
+- Simple DagreD3 (<a href="#simple-dagred3">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/simple-dagred3">files</a>| <a href="https://jsbin.com/qoseloc/edit?js,output">jsbin</a>)
+- Basic Audionode connect track to DagreD3 (<a href="#basic-audionode-connect-track-to-dagred3">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-audionode-connect-track-to-dagred3">files</a>| <a href="https://jsbin.com/lepafos/edit?js,console,output">latest-jsbin</a>)
+
 
 
 ## Description
