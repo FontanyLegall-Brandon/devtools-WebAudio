@@ -8,7 +8,7 @@
 - Basic constructor interceptor (<a href="#basic-constructor-interceptor">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-constructor-interceptor">files</a>| <a href="https://jsbin.com/puyubir/edit?js,console">jsbin</a>)
 - Basic Audionode connect track (<a href="#basic-audionode-connect-track">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-audionode-connect-track">files</a>| <a href="https://jsbin.com/vepawix/edit?js,console,output">jsbin</a>)
 - Simple DagreD3 (<a href="#simple-dagred3">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/simple-dagred3">files</a>| <a href="https://jsbin.com/qoseloc/edit?js,output">jsbin</a>)
-- Basic Audionode connect track to DagreD3 (<a href="#basic-audionode-connect-track-to-dagred3">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-audionode-connect-track-to-dagred3">files</a>| <a href="https://jsbin.com/lepafos/edit?js,console,output">latest-jsbin</a>)
+ - Basic Audionode connect track to DagreD3 (<a href="#basic-audionode-connect-track-to-dagred3">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-audionode-connect-track-to-dagred3">files</a>| <a href="https://jsbin.com/gewefut/8/edit?js,console,output">latest-jsbin</a>)
 
 
 
