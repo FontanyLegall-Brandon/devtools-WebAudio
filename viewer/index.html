@@ -42,15 +42,28 @@
             <img src="assets/logo/logo.png" style="width: 100px; padding: 5px;"/>
                 <p>WebAudio Viewer</p>
             </div>
-            <form id="input">
-                <button type="button" class="btn btn-outline-success btn-lg btn-block">Run</button>
-                <button type="button" onclick="updateDebug()" class="btn btn-outline-alert btn-lg btn-block">UpdateDebug</button>
+            <form id="inputForm" onsubmit="results()">
+                <button type="submit" onclick="" class="btn btn-outline-success btn-lg btn-block">Run</button>
             </form>
         </div>
 
         <div class="col-md-9">
-            <textarea id="debug" name="webaudio-in" form="input" class="form-control" style="height:200px;"></textarea>
+            <textarea id="webaudioIn" name="webaudioIn" form="inputForm" class="form-control" style="height:200px;"></textarea>
+            <br>
+            <p id="writeback"></p>
             <svg id="svg-content" class="img-fluid"></svg>
         </div>
     </div>
 </div>
+
+<script>
+    var form = document.forms["inputForm"];
+    form.onsubmit= function () {
+        var audioIn = document.getElementById("webaudioIn").value;
+        document.getElementById("writeback").innerHTML = audioIn;
+
+        return false;
+
+    }
+
+</script>
