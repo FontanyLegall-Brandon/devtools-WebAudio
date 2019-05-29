@@ -33,6 +33,11 @@
 
 <link rel="stylesheet" href="assets/css/app.css" />
 <link rel="stylesheet" href="assets/css/bootstrap.css" />
+<link rel="stylesheet" href="assets/css/dagre.css" />
+
+<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+<script src="dagre-d3.js"></script>
+
 
 
 <div class="container-fluid">
@@ -51,7 +56,9 @@
             <textarea id="webaudioIn" name="webaudioIn" form="inputForm" class="form-control" style="height:200px;"></textarea>
             <br>
             <div id="writeback"></div>
-            <svg id="svg-content" class="img-fluid"></svg>
+            <svg id="svg-content" class="img-fluid">
+                <g/>
+            </svg>
         </div>
     </div>
 </div>
@@ -62,8 +69,28 @@
         var audioIn = document.getElementById("webaudioIn").value;
         document.getElementById("writeback").innerHTML = audioIn;
 
+        loadJS('try.js', yourCodeToBeCalled, document.body);
+
         return false;
 
     }
+
+    var loadJS = function(url, implementationCode, location){
+        //url is URL of external file, implementationCode is the code
+        //to be called from the file, location is the location to
+        //insert the <script> element
+
+        var scriptTag = document.createElement('script');
+        scriptTag.src = url;
+
+        scriptTag.onload = implementationCode;
+        scriptTag.onreadystatechange = implementationCode;
+
+        location.appendChild(scriptTag);
+    };
+    var yourCodeToBeCalled = function(){
+//your code goes here
+    }
+
 
 </script>
