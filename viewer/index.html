@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>WebAudio Viewer</title>
+
+<link href="https://fonts.googleapis.com/css?family=Lusitana" rel="stylesheet">
+<style>
+
+    path.link {
+        fill: none;
+        stroke: #666;
+        stroke-width: 2px;
+    }
+
+    circle {
+        fill: #FFFFFF;
+        stroke: #000;
+        stroke-width: 2px;
+    }
+
+
+    link-label {
+        font-family: 'Lusitana', serif;
+    }
+
+    text {
+        fill: #000;
+        font: 25px sans-serif;
+        font-family: 'Lusitana', serif;
+        pointer-events: none;
+    }
+
+</style>
+
+<link rel="stylesheet" href="assets/css/app.css" />
+<link rel="stylesheet" href="assets/css/bootstrap.css" />
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="text-center">
+            <img src="assets/logo/logo.png" style="width: 100px; padding: 5px;"/>
+                <p>WebAudio Viewer</p>
+            </div>
+            <form id="inputForm" onsubmit="results()">
+                <button type="submit" onclick="" class="btn btn-outline-success btn-lg btn-block">Run</button>
+            </form>
+        </div>
+
+        <div class="col-md-9">
+            <textarea id="webaudioIn" name="webaudioIn" form="inputForm" class="form-control" style="height:200px;"></textarea>
+            <br>
+            <div id="writeback"></div>
+            <svg id="svg-content" class="img-fluid"></svg>
+        </div>
+    </div>
+</div>
+
+<script>
+    var form = document.forms["inputForm"];
+    form.onsubmit= function () {
+        var audioIn = document.getElementById("webaudioIn").value;
+        document.getElementById("writeback").innerHTML = audioIn;
+
+        return false;
+
+    }
+
+</script>
