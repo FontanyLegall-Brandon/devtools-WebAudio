@@ -1,0 +1,6 @@
+var audio = document.getElementsByTagName("audio")[0];
+audio.addEventListener("load", webaudio(), false);
+
+function webaudio() {
+	...
+}
