@@ -18,22 +18,22 @@ var g = new dagreD3.graphlib.Graph().setGraph({
 });
 
 // Data for this example
-var data = {"nodes": ["host_a", "comp_with_long_name", "comp_b", "host_b", "comp_c", "comp_d"],
+var data = {"nodes": ["node2_a", "node_a", "node_b", "node2_b", "node_c", "node_d"],
     "edges": [
-        {"source": "comp_with_long_name", "target": "host_a"},
-        {"source": "comp_b", "target": "host_a"},
-        {"source": "comp_c", "target": "host_b"},
-        {"source": "comp_b", "target": "host_b"},
-        {"source": "comp_d", "target": "host_a"}
+        {"source": "node_a", "target": "node2_a"},
+        {"source": "node_b", "target": "node2_a"},
+        {"source": "node_c", "target": "node2_b"},
+        {"source": "node_b", "target": "node2_b"},
+        {"source": "node_d", "target": "node2_a"}
     ],
     "tips": {
-        "comp_with_long_name": {"version": "1.2",
+        "node_a": {"version": "1.2",
             "date": "12/03/2014"},
-        "comp_b": {"version": "2.3.4",
+        "node_b": {"version": "2.3.4",
             "date": "23/06/2014"},
-        "comp_c": {"version": "UNKNOWN",
+        "node_c": {"version": "UNKNOWN",
             "date": "UNKNOWN"},
-        "comp_d": {"version": "0.4",
+        "node_d": {"version": "0.4",
             "date": "01/11/2014"}}};
 
 var nodes = data.nodes;
