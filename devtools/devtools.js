@@ -15,7 +15,7 @@ function handleHidden() {
 Create a panel, and add listeners for panel show/hide events.
 */
 browser.devtools.panels.create(
-  "My WebAudio",
+  "WebAudio",
   "/icons/icon48.png",
   "/devtools/panel/panel.html"
 ).then((newPanel) => {
