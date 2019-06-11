@@ -133,7 +133,6 @@ class WebAudioDebugger {
     static newNodeDecorator(nativeApplyBoundToMethod, originalArguments) {
         var result = nativeApplyBoundToMethod(this, originalArguments);
         console.log("createStereoPanner intercepté")
-
         return result;
     }
 
@@ -144,13 +143,11 @@ class WebAudioDebugger {
         var audioNode =  (
             new (nativeBindApplyMethod_(
                 originalConstructor, [null].concat(argumentsList))));
-        console.log("number of inputs : "+ audioNode.numberOfInputs);
-        console.log("number of Outputs : "+ audioNode.numberOfOutputs);
-        console.log("new "+audioNode.constructor.name+" intercepté !");
-        console.log(originalConstructor)
-        WebAudioDebugger.nodeList.push(audioNode.constructor.name);
+        console.log("new StereoPannerNode(ctx) intercepté !");
+        WebAudioDebugger.nodeList.push("StereoPannerNode");
         WebAudioDebugger.nodeNumber++;
-        Graph.addNode(audioNode.constructor.name);
+        Graph.addNode("StereoPannerNode");
+        Graph.draw();
         return audioNode;
     }
 
@@ -161,8 +158,9 @@ class WebAudioDebugger {
 
         console.log("connect appelé")
         WebAudioDebugger.nodeNumber++;
-        WebAudioDebugger.nodeList.push(result.constructor.name + "(id "+WebAudioDebugger.nodeNumber+")");
-        Graph.addNode(result.constructor.name + "(id "+WebAudioDebugger.nodeNumber+")");
+        WebAudioDebugger.nodeList.push("connect id "+WebAudioDebugger.nodeNumber);
+        Graph.addNode("connect id "+WebAudioDebugger.nodeNumber);
+        Graph.draw();
 
     }
 }
@@ -207,4 +205,3 @@ if (typeof window['StereoPannerNode'] == 'function') {
         originalStereoPannerNodeConstructor.prototype;
     StereoPannerNode['prototype']['constructor'] = StereoPannerNode;
 }
-
