@@ -36657,7 +36657,7 @@ var ClientRequest = module.exports = function (opts) {
 	} else if (opts.mode === 'allow-wrong-content-type') {
 		// If streaming is more important than preserving the 'content-type' header
 		preferBinary = !capability.overrideMimeType
-	} else if (!opts.mode || opts.mode === 'generate.js' || opts.mode === 'prefer-fast') {
+	} else if (!opts.mode || opts.mode === 'default' || opts.mode === 'prefer-fast') {
 		// Use binary if text streaming may corrupt data or the content-type header, or for speed
 		preferBinary = true
 	} else {
