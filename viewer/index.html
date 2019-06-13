@@ -56,14 +56,15 @@
             </div>
             <form id="inputForm" onsubmit="Graph.reset();resetWebaudio();results();">
                 <button type="submit" onclick="" class="btn btn-outline-success btn-lg btn-block">Run</button>
-                <button type="button" onclick="Graph.reset();resetWebaudio();" class="btn btn-outline-alert btn-lg btn-block">Reset</button>
+                <button type="button" onclick="Graph.reset();resetWebaudio();" class="btn btn-outline-alert btn-lg btn-block">Reset WebAudio</button>
+                <button type="button" onclick="Graph.reset();resetAll();" class="btn btn-outline-alert btn-lg btn-block">Reset All</button>
             </form>
             <hr>
-            <button type="button" onclick="Graph.reset();resetWebaudio();generateWebaudio();" class="btn btn-outline-alert btn-lg btn-block">Generate</button>
-            <select class="browser-default custom-select" id="selectedToGen">
-                <option selected value="balance">Balance</option>
-                <option value="equalizer">Equalizer</option>
-                <option value="empty">Empty</option>
+            <p style="text-align: center;">Generate</p>
+            <select class="browser-default custom-select" id="selectedToGen" title="try" >
+                <option selected value="balance" onclick="Graph.reset();resetWebaudio();generateWebaudio();">Balance</option>
+                <option value="equalizer" onclick="Graph.reset();resetWebaudio();generateWebaudio();">Equalizer</option>
+                <option value="empty" onclick="Graph.reset();resetWebaudio();generateWebaudio();">Empty</option>
             </select>
         </div>
 
@@ -173,6 +174,13 @@ function buildAudioGraphPanner() {
         while (myNode2.firstChild) {
             myNode2.removeChild(myNode2.firstChild);
         }
+    }
+
+    function resetAll() {
+        resetWebaudio();
+        document.getElementById("webaudioIn").value = "";
+        document.getElementById("webaudioInScript").value = "";
+
     }
 </script>
 <script src="inspect.js"></script>
