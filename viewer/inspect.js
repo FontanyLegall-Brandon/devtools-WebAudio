@@ -56,16 +56,6 @@ class Graph{
 
 // Add nodes
         nodes.forEach(function(node) {
-            if (node.indexOf("host") == 0) {
-                g.setNode(node, {
-                    labelType: "html",
-                    label: "<b>Comp: "+node+"</b>",
-                    class: "host",
-                    rx: 5,
-                    ry: 5,
-                    width: 150
-                });
-            } else {
                 g.setNode(node, {
                     labelType: "html",
                     label: "<b>"+node+"</b>",
@@ -74,8 +64,7 @@ class Graph{
                     ry: 5,
                     width: 150
                 });
-
-            }
+                
         });
 
 // Add edges
