@@ -8,7 +8,8 @@ function genWebaudio(name){
                 "<br>\n" +
                 "<label for=\"pannerSlider\">Balance</label>\n" +
                 "<input type=\"range\" min=\"-1\" max=\"1\" step=\"0.1\" value=\"0\" id=\"pannerSlider\" />";
-            audioscript = "var audioContext;\n" +
+            audioscript = "var ctx = window.AudioContext || window.webkitAudioContext;\n" +
+                "var audioContext;\n" +
                 "var player, pannerSlider, pannerNode;\n" +
                 "\n" +
                 "var audio = document.getElementsByTagName(\"audio\")[0];\n" +
