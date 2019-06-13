@@ -40,6 +40,7 @@
 
 <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
 <script src="dagre-d3.js"></script>
+<script src="generate.js"></script>
 
 </head>
 <body>
@@ -55,6 +56,11 @@
             </div>
             <form id="inputForm" onsubmit="results()">
                 <button type="submit" onclick="" class="btn btn-outline-success btn-lg btn-block">Run</button>
+                <button type="button" onclick="generateWebaudio()" class="btn btn-outline-alert btn-lg btn-block">Generate</button>
+                <select class="browser-default custom-select" id="selectedToGen">
+                    <option selected value="balance">Balance</option>
+                    <option value="equalizer">Equalizer</option>
+                </select>
             </form>
         </div>
 
