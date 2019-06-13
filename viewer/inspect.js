@@ -64,15 +64,12 @@ class Graph{
                     ry: 5,
                     width: 150
                 });
-                
+
         });
 
 // Add edges
         edges.forEach(function(edge) {
             var edgeclass = "normal";
-            if (edge.source == 'comp_d') {
-                edgeclass = "warning";
-            }
             g.setEdge(edge.source, edge.target,
                 {
                     label: "on",
