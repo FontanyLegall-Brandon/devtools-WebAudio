@@ -4,7 +4,7 @@ function genWebaudio(name){
 
     switch (name) {
         case 'balance':
-            audio = "<audio src=\"https://mainline.i3s.unice.fr/mooc/drums.mp3\" id=\"pannerPlayer\" controls loop crossorigin=\"anonymous\"></audio>\n" +
+            audio = "<audio src=\"https://brandon.fontany-legall.xyz/public/audio/drums.mp3\" id=\"pannerPlayer\" controls loop crossorigin=\"anonymous\"></audio>\n" +
                 "<br>\n" +
                 "<label for=\"pannerSlider\">Balance</label>\n" +
                 "<input type=\"range\" min=\"-1\" max=\"1\" step=\"0.1\" value=\"0\" id=\"pannerSlider\" />";
