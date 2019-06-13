@@ -54,11 +54,11 @@
             <img src="assets/logo/logo.png" style="width: 100px; padding: 5px;"/>
                 <p>WebAudio Viewer</p>
             </div>
-            <form id="inputForm" onsubmit="results()">
+            <form id="inputForm" onsubmit="Graph.reset();results();">
                 <button type="submit" onclick="" class="btn btn-outline-success btn-lg btn-block">Run</button>
             </form>
             <hr>
-            <button type="button" onclick="generateWebaudio()" class="btn btn-outline-alert btn-lg btn-block">Generate</button>
+            <button type="button" onclick="Graph.reset();generateWebaudio();" class="btn btn-outline-alert btn-lg btn-block">Generate</button>
             <select class="browser-default custom-select" id="selectedToGen">
                 <option selected value="balance">Balance</option>
                 <option value="equalizer">Equalizer</option>

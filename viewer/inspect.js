@@ -19,6 +19,11 @@ class Graph{
         Graph.tips.push(tips);
     }
 
+    static reset(){
+        var svg = d3.select("svg > g");
+        svg.selectAll("*").remove();
+    }
+
     static draw(){
 
         // Data for this example
