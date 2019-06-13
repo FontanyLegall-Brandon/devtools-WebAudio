@@ -9,6 +9,7 @@
 - Basic Audionode connect track (<a href="#basic-audionode-connect-track">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-audionode-connect-track">files</a>| <a href="https://jsbin.com/vepawix/edit?js,console,output">jsbin</a>)
 - Simple DagreD3 (<a href="#simple-dagred3">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/simple-dagred3">files</a>| <a href="https://jsbin.com/qoseloc/edit?js,output">jsbin</a>)
  - Basic Audionode connect track to DagreD3 (<a href="#basic-audionode-connect-track-to-dagred3">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/basic-audionode-connect-track-to-dagred3">files</a>| <a href="https://jsbin.com/gewefut/8/edit?js,console,output">latest-jsbin</a>)
+  - Equalizer (<a href="#equalizer">description</a>|<a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists/equalizer">files</a>| <a href="https://jsbin.com/hadafej/1/edit?js,output">jsbin</a>)
 
 
 
@@ -53,3 +54,8 @@ A simple dagreD3, the lib that we are gonna to use to display graph
 <img src="https://brandon.fontany-legall.xyz/public/images/webaudio/basic-audionode-connect-track-to-dagred3.png" height="200px"/>
 
 Basic track of the connections between audionodes with DagreD3
+
+### Equalizer 
+<img src="https://brandon.fontany-legall.xyz/public/images/webaudio/equalizer.png" height="200px"/>
+
+Simple equalizer with WebAudio
