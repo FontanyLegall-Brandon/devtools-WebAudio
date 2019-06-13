@@ -50,8 +50,81 @@ function genWebaudio(name){
                 "}";
             break;
         case 'equalizer':
-            audio = "";
-            audioscript = "";
+            audio = "<div class=\"eq\">\n" +
+                "  <audio id=\"player\" controls crossorigin=\"anonymous\" loop>\n" +
+                "  <source src=\"https://brandon.fontany-legall.xyz/public/audio/guitarRiff1.mp3\">\n" +
+                "  \n" +
+                "  Your browser does not support the audio tag.\n" +
+                "</audio>\n" +
+                "  <div class=\"controls\">\n" +
+                "    <label>60Hz</label>\n" +
+                "    <input type=\"range\" value=\"0\" step=\"1\" min=\"-30\" max=\"30\" oninput=\"changeGain(this.value, 0);\"></input>\n" +
+                "  <output id=\"gain0\">0 dB</output>\n" +
+                "  </div>\n" +
+                "  <div class=\"controls\">\n" +
+                "    <label>170Hz</label>\n" +
+                "    <input type=\"range\" value=\"0\" step=\"1\" min=\"-30\" max=\"30\" oninput=\"changeGain(this.value, 1);\"></input>\n" +
+                "<output id=\"gain1\">0 dB</output>\n" +
+                "  </div>\n" +
+                "  <div class=\"controls\">\n" +
+                "    <label>350Hz</label>\n" +
+                "    <input type=\"range\" value=\"0\" step=\"1\" min=\"-30\" max=\"30\" oninput=\"changeGain(this.value, 2);\"></input>\n" +
+                "<output id=\"gain2\">0 dB</output>\n" +
+                "  </div>\n" +
+                "  <div class=\"controls\">\n" +
+                "    <label>1000Hz</label>\n" +
+                "    <input type=\"range\" value=\"0\" step=\"1\" min=\"-30\" max=\"30\" oninput=\"changeGain(this.value, 3);\"></input>\n" +
+                "<output id=\"gain3\">0 dB</output>\n" +
+                "  </div>\n" +
+                "  <div class=\"controls\">\n" +
+                "    <label>3500Hz</label>\n" +
+                "    <input type=\"range\" value=\"0\" step=\"1\" min=\"-30\" max=\"30\" oninput=\"changeGain(this.value, 4);\"></input>\n" +
+                "<output id=\"gain4\">0 dB</output>\n" +
+                "  </div>\n" +
+                "  <div class=\"controls\">\n" +
+                "    <label>10000Hz</label>\n" +
+                "    <input type=\"range\" value=\"0\" step=\"1\" min=\"-30\" max=\"30\" oninput=\"changeGain(this.value, 5);\"></input>\n" +
+                "<output id=\"gain5\">0 dB</output>\n" +
+                "  </div>\n" +
+                "</div>";
+            audioscript = "var ctx = window.AudioContext || window.webkitAudioContext;\n" +
+                "var context = new ctx();\n" +
+                "\n" +
+                "var mediaElement = document.getElementById('player');\n" +
+                "    mediaElement.onplay = (e) => {context.resume();}\n" +
+                "\n" +
+                "var sourceNode = context.createMediaElementSource(mediaElement);\n" +
+                "\n" +
+                "// create the equalizer. It's a set of biquad Filters\n" +
+                "\n" +
+                "var filters = [];\n" +
+                "\n" +
+                "    // Set filters\n" +
+                "    [60, 170, 350, 1000, 3500, 10000].forEach(function(freq, i) {\n" +
+                "      var eq = context.createBiquadFilter();\n" +
+                "      eq.frequency.value = freq;\n" +
+                "      eq.type = \"peaking\";\n" +
+                "      eq.gain.value = 0;\n" +
+                "      filters.push(eq);\n" +
+                "    });\n" +
+                "\n" +
+                " // Connect filters in serie\n" +
+                "   sourceNode.connect(filters[0]);\n" +
+                "   for(var i = 0; i < filters.length - 1; i++) {\n" +
+                "      filters[i].connect(filters[i+1]);\n" +
+                "    }\n" +
+                "\n" +
+                "// connect the last filter to the speakers\n" +
+                "filters[filters.length - 1].connect(context.destination);\n" +
+                "\n" +
+                "function changeGain(sliderVal,nbFilter) {\n" +
+                "  var value = parseFloat(sliderVal);\n" +
+                "  filters[nbFilter].gain.value = value;\n" +
+                "  \n" +
+                "  // update output labels\n" +
+                "  var output = document.querySelector(\"#gain\"+nbFilter);\n" +
+                "  output.value = value + \" dB\";\n" +
+                "}";
             break;
         default:
             audio = "";
