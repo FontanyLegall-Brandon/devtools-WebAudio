@@ -54,11 +54,11 @@
             <img src="assets/logo/logo.png" style="width: 100px; padding: 5px;"/>
                 <p>WebAudio Viewer</p>
             </div>
-            <form id="inputForm" onsubmit="Graph.reset();results();">
+            <form id="inputForm" onsubmit="Graph.reset();resetWebaudio();results();">
                 <button type="submit" onclick="" class="btn btn-outline-success btn-lg btn-block">Run</button>
             </form>
             <hr>
-            <button type="button" onclick="Graph.reset();generateWebaudio();" class="btn btn-outline-alert btn-lg btn-block">Generate</button>
+            <button type="button" onclick="Graph.reset();resetWebaudio();generateWebaudio();" class="btn btn-outline-alert btn-lg btn-block">Generate</button>
             <select class="browser-default custom-select" id="selectedToGen">
                 <option selected value="balance">Balance</option>
                 <option value="equalizer">Equalizer</option>
@@ -161,11 +161,18 @@ function buildAudioGraphPanner() {
 
         location.appendChild(scriptTag);
     };
-    var yourCodeToBeCalled = function(){
-//your code goes here
+
+    function resetWebaudio(){
+        var myNode = document.getElementById("writeback");
+        while (myNode.firstChild) {
+            myNode.removeChild(myNode.firstChild);
+        }
+
+        var myNode2 = document.getElementById("writebackscript");
+        while (myNode2.firstChild) {
+            myNode2.removeChild(myNode2.firstChild);
+        }
     }
-
-
 </script>
 <script src="inspect.js"></script>
 </body>

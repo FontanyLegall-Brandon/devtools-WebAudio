@@ -22,6 +22,7 @@ class Graph{
     static reset(){
         var svg = d3.select("svg > g");
         svg.selectAll("*").remove();
+
     }
 
     static draw(){
