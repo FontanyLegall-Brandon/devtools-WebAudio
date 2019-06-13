@@ -37,7 +37,7 @@ html, body { margin:0; padding:0; overflow:hidden; }
 </style>
 </head>
 <body>
-  <audio src="https://mainline.i3s.unice.fr/mooc/drums.mp3" id="pannerPlayer" controls loop crossorigin="anonymous"></audio>
+  <audio src="https://brandon.fontany-legall.xyz/public/audio/drums.mp3" id="pannerPlayer" controls loop crossorigin="anonymous"></audio>
         <br>
         <label for="pannerSlider">Balance</label>
         <input type="range" min="-1" max="1" step="0.1" value="0" id="pannerSlider" />
@@ -199,6 +199,7 @@ class WebAudioDebugger {
     console.log("number of inputs : "+ audioNode.numberOfInputs);
     console.log("number of Outputs : "+ audioNode.numberOfOutputs);
     console.log("new "+audioNode.constructor.name+" intercepté !");
+    console.log(originalConstructor)
     WebAudioDebugger.nodeList.push(audioNode.constructor.name);
     WebAudioDebugger.nodeNumber++;
     Graph.addNode(audioNode.constructor.name);
@@ -481,6 +482,7 @@ class WebAudioDebugger {
     console.log("number of inputs : "+ audioNode.numberOfInputs);
     console.log("number of Outputs : "+ audioNode.numberOfOutputs);
     console.log("new "+audioNode.constructor.name+" intercepté !");
+    console.log(originalConstructor)
     WebAudioDebugger.nodeList.push(audioNode.constructor.name);
     WebAudioDebugger.nodeNumber++;
     Graph.addNode(audioNode.constructor.name);

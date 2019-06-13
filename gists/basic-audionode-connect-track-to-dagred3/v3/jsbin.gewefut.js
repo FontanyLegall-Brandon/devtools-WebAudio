@@ -147,6 +147,7 @@ class WebAudioDebugger {
     console.log("number of inputs : "+ audioNode.numberOfInputs);
     console.log("number of Outputs : "+ audioNode.numberOfOutputs);
     console.log("new "+audioNode.constructor.name+" intercepté !");
+    console.log(originalConstructor)
     WebAudioDebugger.nodeList.push(audioNode.constructor.name);
     WebAudioDebugger.nodeNumber++;
     Graph.addNode(audioNode.constructor.name);
