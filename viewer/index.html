@@ -40,6 +40,7 @@
 
 <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
 <script src="dagre-d3.js"></script>
+<script src="generate.js"></script>
 
 </head>
 <body>
@@ -53,15 +54,22 @@
             <img src="assets/logo/logo.png" style="width: 100px; padding: 5px;"/>
                 <p>WebAudio Viewer</p>
             </div>
-            <form id="inputForm" onsubmit="results()">
+            <form id="inputForm" onsubmit="Graph.reset();resetWebaudio();results();">
                 <button type="submit" onclick="" class="btn btn-outline-success btn-lg btn-block">Run</button>
             </form>
+            <hr>
+            <button type="button" onclick="Graph.reset();resetWebaudio();generateWebaudio();" class="btn btn-outline-alert btn-lg btn-block">Generate</button>
+            <select class="browser-default custom-select" id="selectedToGen">
+                <option selected value="balance">Balance</option>
+                <option value="equalizer">Equalizer</option>
+                <option value="empty">Empty</option>
+            </select>
         </div>
 
         <div class="col-md-9">
             <h3>WebAudio Code</h3>
             <textarea id="webaudioIn" name="webaudioIn" form="inputForm" class="form-control" style="height:200px;" title="Insert WebAudio Code Here">
-<audio src="https://mainline.i3s.unice.fr/mooc/drums.mp3" id="pannerPlayer" controls loop crossorigin="anonymous"></audio>
+<audio src="https://brandon.fontany-legall.xyz/public/audio/drums.mp3" id="pannerPlayer" controls loop crossorigin="anonymous"></audio>
 <br>
 <label for="pannerSlider">Balance</label>
 <input type="range" min="-1" max="1" step="0.1" value="0" id="pannerSlider" /></textarea>
@@ -153,11 +161,18 @@ function buildAudioGraphPanner() {
 
         location.appendChild(scriptTag);
     };
-    var yourCodeToBeCalled = function(){
-//your code goes here
+
+    function resetWebaudio(){
+        var myNode = document.getElementById("writeback");
+        while (myNode.firstChild) {
+            myNode.removeChild(myNode.firstChild);
+        }
+
+        var myNode2 = document.getElementById("writebackscript");
+        while (myNode2.firstChild) {
+            myNode2.removeChild(myNode2.firstChild);
+        }
     }
-
-
 </script>
 <script src="inspect.js"></script>
 </body>
