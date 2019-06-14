@@ -27,6 +27,12 @@ class Graph{
         var svg = d3.select("svg > g");
         svg.selectAll("*").remove();
 
+        Graph.nodes = [];
+        Graph.edges = [];
+        Graph.tips = [];
+
+        WebAudioDebugger.nodeNumber = 1;
+        WebAudioDebugger.lastest = null;
     }
 
     static draw(){
