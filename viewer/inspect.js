@@ -65,8 +65,7 @@ class Graph{
                     label: "<b>"+node+"</b>",
                     class: "comp",
                     rx: 5,
-                    ry: 5,
-                    width: 150
+                    ry: 5
                 });
 
         });
