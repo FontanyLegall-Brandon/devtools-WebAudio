@@ -15,6 +15,10 @@ class Graph{
         Graph.edges.push(edge);
     }
 
+    static addEdge(source,target){
+        Graph.edges.push({"source": source, "target": target});
+    }
+
     static addTips(tips){
         Graph.tips.push(tips);
     }
@@ -160,12 +164,18 @@ class WebAudioDebugger {
     static connectDecorator(nativeBoundConnect, originalArguments) {
         var result = nativeBoundConnect(this, originalArguments);
 
-        console.log("connect appelé")
+        console.log("connect appelé");
         WebAudioDebugger.nodeNumber++;
+        var name  = originalArguments[0].constructor.name.toString();
+        var node = name+WebAudioDebugger.nodeNumber;
         console.log(originalArguments[0]);
         console.log(originalArguments[0].constructor.name);
-        var name  = originalArguments[0].constructor.name.toString();
-        Graph.addNode(name+WebAudioDebugger.nodeNumber);
+
+        Graph.addNode(node);
+        if(WebAudioDebugger.lastest != null){
+            Graph.addEdge(WebAudioDebugger.lastest,node);
+        }
+        WebAudioDebugger.lastest = node;
         Graph.draw();
 
     }
@@ -173,6 +183,7 @@ class WebAudioDebugger {
 
 
 WebAudioDebugger.nodeNumber = 1;
+WebAudioDebugger.lastest = null;
 
 
 /* ------------------------------------------------------------- */
