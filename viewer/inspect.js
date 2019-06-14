@@ -76,7 +76,6 @@ class Graph{
             var edgeclass = "normal";
             g.setEdge(edge.source, edge.target,
                 {
-                    label: "on",
                     arrowhead: "vee",
                     arrowheadStyle: "fill: #383838",
                     class: edgeclass,
