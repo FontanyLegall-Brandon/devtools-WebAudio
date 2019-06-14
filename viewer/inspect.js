@@ -15,6 +15,10 @@ class Graph{
         Graph.edges.push(edge);
     }
 
+    static addEdge(source,target){
+        Graph.edges.push({"source": source, "target": target});
+    }
+
     static addTips(tips){
         Graph.tips.push(tips);
     }
@@ -56,37 +60,21 @@ class Graph{
 
 // Add nodes
         nodes.forEach(function(node) {
-            if (node.indexOf("host") == 0) {
-                g.setNode(node, {
-                    labelType: "html",
-                    label: "<b>Comp: "+node+"</b>",
-                    class: "host",
-                    rx: 5,
-                    ry: 5,
-                    width: 150
-                });
-            } else {
                 g.setNode(node, {
                     labelType: "html",
                     label: "<b>"+node+"</b>",
                     class: "comp",
                     rx: 5,
-                    ry: 5,
-                    width: 150
+                    ry: 5
                 });
 
-            }
         });
 
 // Add edges
         edges.forEach(function(edge) {
             var edgeclass = "normal";
-            if (edge.source == 'comp_d') {
-                edgeclass = "warning";
-            }
             g.setEdge(edge.source, edge.target,
                 {
-                    label: "on",
                     arrowhead: "vee",
                     arrowheadStyle: "fill: #383838",
                     class: edgeclass,
@@ -118,6 +106,18 @@ Graph.create();
 Graph.draw();
 
 /**
+ * Prototype to get name of a function
+ * @returns {string}
+ */
+Object.prototype.getName = function() {
+    var funcNameRegex = /function (.{1,})\(/;
+    var results = (funcNameRegex).exec((this).constructor.toString());
+    return (results && results.length > 1) ? results[1] : "";
+};
+
+
+
+/**
  * A reference to a native function that performs the logic of
  * Function.prototype.bind([CONSTRUCTOR], arguments ...). We need this reference
  * because we rely on using that logic to construct various objects, but some
@@ -138,7 +138,8 @@ class WebAudioDebugger {
     // différentes
     static newNodeDecorator(nativeApplyBoundToMethod, originalArguments) {
         var result = nativeApplyBoundToMethod(this, originalArguments);
-        console.log("createStereoPanner intercepté")
+        console.log("Audio constructeur intercepté !");
+        WebAudioDebugger.nodeNumber++;
         return result;
     }
 
@@ -149,11 +150,10 @@ class WebAudioDebugger {
         var audioNode =  (
             new (nativeBindApplyMethod_(
                 originalConstructor, [null].concat(argumentsList))));
-        console.log("new StereoPannerNode(ctx) intercepté !");
-        WebAudioDebugger.nodeList.push("StereoPannerNode");
+        console.log("Audio constructeur intercepté !");
         WebAudioDebugger.nodeNumber++;
-        Graph.addNode("StereoPannerNode");
-        Graph.draw();
+        //Graph.addNode("StereoPannerNode");
+        //Graph.draw();
         return audioNode;
     }
 
@@ -162,18 +162,26 @@ class WebAudioDebugger {
     static connectDecorator(nativeBoundConnect, originalArguments) {
         var result = nativeBoundConnect(this, originalArguments);
 
-        console.log("connect appelé")
+        console.log("connect appelé");
         WebAudioDebugger.nodeNumber++;
-        WebAudioDebugger.nodeList.push("connect id "+WebAudioDebugger.nodeNumber);
-        Graph.addNode("connect id "+WebAudioDebugger.nodeNumber);
+        var name  = originalArguments[0].constructor.name.toString();
+        var node = name+WebAudioDebugger.nodeNumber;
+        console.log(originalArguments[0]);
+        console.log(originalArguments[0].constructor.name);
+
+        Graph.addNode(node);
+        if(WebAudioDebugger.lastest != null){
+            Graph.addEdge(WebAudioDebugger.lastest,node);
+        }
+        WebAudioDebugger.lastest = node;
         Graph.draw();
 
     }
 }
 
 
-WebAudioDebugger.nodeList = [];
-WebAudioDebugger.nodeNumber = 0;
+WebAudioDebugger.nodeNumber = 1;
+WebAudioDebugger.lastest = null;
 
 
 /* ------------------------------------------------------------- */
@@ -184,7 +192,6 @@ AudioNode.prototype.connect = WebAudioDebugger.wrapNativeFunction(
     WebAudioDebugger.connectDecorator);
 
 /*--------------------------------*/
-
 /* Redéfinition des constructeurs */
 /*--------------------------------*/
 /* Il existe deux manières de créer des noeuds : 1) avec ctx.create... et
