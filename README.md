@@ -26,6 +26,7 @@ WebAudio devtools extension
 <p align="center">
   <a href="#goal">Goal</a> •
   <a href="#versions">Versions</a> •
+  <a href="#documentation">Documentation</a> •
   <a href="#challenges">Challenges</a> •
   <a href="#technical-solutions">Technical Solutions</a> 
 </p>
@@ -39,11 +40,28 @@ Migrate Web Audio Tool to an extension web extension
 
 ## Versions
 
- - [ ] **0.1.3 :**
+ - [x] **0.1.3 :**
 	 - Create the extension
 	 - Import library
 	 - Set a basic example of the extension with dagre-d3
- - [ ] In progress
+- [x] **0.1.4 :**
+	 - Minor modifications
+- [x] **Viewer 1 :**
+	 - Create the viewer
+	 - Impletementation of a first self-version of CallWatcher
+	 - Transformation of the CallWatcher datas to a Dagre Json
+	 - Creation of the Graph
+	 - Render of the Graph with D3
+	 - Possibility to zoom/click into graph nodes (events)
+	 - Possibility to view all the audio parameters into the console
+- [ ] **Viewer 2 :**
+     - Implementation of a self-version of the WeakRef
+	 - Possibility to view the WebAudio real time modifications
+
+## Documentation
+- Gists : https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/gists
+- Rapport : https://github.com/FontanyLegall-Brandon/devtools-WebAudio/blob/master/docs/devtools_webaudio.pdf
+- Meetings : https://github.com/FontanyLegall-Brandon/devtools-WebAudio/tree/master/docs/meeting
 
 ## Challenges
 - Two parts of its implementation to be addressed:
@@ -67,3 +85,10 @@ Migrate Web Audio Tool to an extension web extension
 		- set a finalizer for that node that uses this ID as its holdings
 		- when the node is reclaimed, the finalizer runs with the ID holdings, which we postMessage (or whatever messaging API content scripts have) the ID up to the web extension itself, so it can clean up
 
+## Credits
+- Referent : Michel Buffa
+- Mentors :
+    - Luca Greco
+    - Paul Arduino
+    - Nick Fitzgerald
+    - Yulia Startsev
