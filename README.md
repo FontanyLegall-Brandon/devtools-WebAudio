@@ -85,3 +85,10 @@ Migrate Web Audio Tool to an extension web extension
 		- set a finalizer for that node that uses this ID as its holdings
 		- when the node is reclaimed, the finalizer runs with the ID holdings, which we postMessage (or whatever messaging API content scripts have) the ID up to the web extension itself, so it can clean up
 
+## Credits
+- Referent : Michel Buffa
+- Mentors :
+    - Luca Greco
+    - Paul Arduino
+    - Nick Fitzgerald
+    - Yulia Startsev
