@@ -13,12 +13,12 @@ WebAudio devtools extension
  <a href="">
     <img src="https://img.shields.io/amo/v/incomming.svg">
   </a>
- <img src="https://img.shields.io/github/tag/FontanyLegall-Brandon/devtools-WebAudio.svg">
+ <img src="https://img.shields.io/github/tag/FontanyLegall-Brandon/devtools-webaudio.svg">
   <a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/issues">
-    <img src="https://img.shields.io/github/issues/FontanyLegall-Brandon/devtools-WebAudio.svg">
+    <img src="https://img.shields.io/github/issues/FontanyLegall-Brandon/devtools-webaudio.svg">
   </a>
   <a href="https://github.com/FontanyLegall-Brandon/devtools-WebAudio/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/FontanyLegall-Brandon/devtools-WebAudio.svg">
+    <img src="https://img.shields.io/github/license/FontanyLegall-Brandon/devtools-webaudio.svg">
   </a>
   
 </p>
